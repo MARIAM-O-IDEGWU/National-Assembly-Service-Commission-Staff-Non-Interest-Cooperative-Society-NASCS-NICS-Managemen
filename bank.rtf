@@ -1,0 +1,491 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\f0\fs22\lang1033\par
+--\par
+-- Database: `bank`\par
+--\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `achieve`\par
+--\par
+\par
+CREATE TABLE `achieve` (\par
+  `FNO` varchar(50) NOT NULL,\par
+  `ACCOUNTYPE` varchar(50) NOT NULL,\par
+  `LOANAMOUNT` double NOT NULL,\par
+  `MONTHLYPAY` varchar(50) DEFAULT NULL,\par
+  `DATE` varchar(50) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `achieve`\par
+--\par
+\par
+INSERT INTO `achieve` (`FNO`, `ACCOUNTYPE`, `LOANAMOUNT`, `MONTHLYPAY`, `DATE`) VALUES\par
+('PF305', 'savings', 7000, '2', '12/6/21');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `achievemember`\par
+--\par
+\par
+CREATE TABLE `achievemember` (\par
+  `FILENO` varchar(50) NOT NULL,\par
+  `NAME` varchar(50) NOT NULL,\par
+  `Year` varchar(50) NOT NULL,\par
+  `Month` varchar(50) NOT NULL,\par
+  `Day` varchar(50) NOT NULL,\par
+  `SEX` varchar(50) NOT NULL,\par
+  `MARITAL` varchar(50) NOT NULL,\par
+  `HOMEADD` varchar(50) NOT NULL,\par
+  `MOBILE` varchar(50) NOT NULL,\par
+  `EMAIL` varchar(50) NOT NULL,\par
+  `DEPT` varchar(50) NOT NULL,\par
+  `NXTKIN` varchar(50) NOT NULL,\par
+  `RELATIONSHIP` varchar(50) NOT NULL,\par
+  `NXTKINMOBILE` varchar(50) NOT NULL,\par
+  `NXTKINADD` varchar(50) NOT NULL,\par
+  `INVESTMENT` varchar(50) NOT NULL,\par
+  `SAVINGS` varchar(50) NOT NULL,\par
+  `TARGETEMG` varchar(50) NOT NULL,\par
+  `RETIRESAVINS` varchar(50) NOT NULL,\par
+  `PIX` varchar(100) DEFAULT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `history`\par
+--\par
+\par
+CREATE TABLE `history` (\par
+  `DATE` varchar(50) NOT NULL,\par
+  `TIME` varchar(50) NOT NULL,\par
+  `DEBIT` varchar(50) NOT NULL,\par
+  `BALANCE` varchar(50) NOT NULL,\par
+  `ACCOUNTTYPE` varchar(50) NOT NULL,\par
+  `FNO` varchar(30) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `history`\par
+--\par
+\par
+INSERT INTO `history` (`DATE`, `TIME`, `DEBIT`, `BALANCE`, `ACCOUNTTYPE`, `FNO`) VALUES\par
+('2021-12-05', '04:54:02 ', '100.0', '2100.0', 'Credit-SAVINGS', 'PF301'),\par
+('2021-12-05', '04:54:20 ', '50.0', '2050.0', 'Debit-SAVINGS', 'PF301'),\par
+('2021-12-05', '21:29:09 ', '100.0', '1900.0', 'Debit-Investment', 'PF301'),\par
+('2021-12-05', '21:29:47 ', '100.0', '1900.0', 'Debit-RetirementSAV', 'PF301'),\par
+('2021-12-05', '21:30:28 ', '100.0', '1900.0', 'Debit-TargetEMG', 'PF301'),\par
+('2021-12-06', '04:04:41 ', '100.0', '1100.0', 'Debit-Investment', 'PF305'),\par
+('2021-12-06', '04:05:03 ', '200.0', '1300.0', 'Credit-Investment', 'PF305'),\par
+('2021-12-07', '01:59:00 ', '100.0', '1800.0', 'Credit-TargetEMG', 'PF306'),\par
+('2021-12-07', '02:03:40 ', '100.0', '1700.0', 'Debit-TargetEMG', 'PF306'),\par
+('2021-12-07', '02:03:48 ', '100.0', '1600.0', 'Debit-SAVINGS', 'PF306'),\par
+('2021-12-07', '02:03:57 ', '100.0', '1600.0', 'Debit-RetirementSAV', 'PF306'),\par
+('2021-12-07', '11:40:46 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:40:53 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:40:59 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:01 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:06 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:07 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:11 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:13 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:14 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:46 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '11:41:49 ', '45.0', '1055.0', 'Debit-Investment', 'PF307'),\par
+('2021-12-07', '12:13:10 ', '36.0', '1164.0', 'Debit-RetirementSAV', 'PF307'),\par
+('2021-12-26', '01:56:24 ', '200.0', '9660.0', 'Debit-SAVINGS', 'PF301'),\par
+('2021-12-30', '04:25:11 ', '1000.0', '5000.0', 'Credit-SAVINGS', 'PF2021'),\par
+('2021-12-30', '04:25:49 ', '200.0', '4800.0', 'Debit-SAVINGS', 'PF2021');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `historyachieve`\par
+--\par
+\par
+CREATE TABLE `historyachieve` (\par
+  `DATE` varchar(50) NOT NULL,\par
+  `TIME` varchar(50) NOT NULL,\par
+  `DEBIT` varchar(50) NOT NULL,\par
+  `BALANCE` varchar(50) NOT NULL,\par
+  `ACCOUNTTYPE` varchar(50) NOT NULL,\par
+  `FNO` varchar(30) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `historycomment`\par
+--\par
+\par
+CREATE TABLE `historycomment` (\par
+  `DATE` varchar(50) NOT NULL,\par
+  `TIME` varchar(50) NOT NULL,\par
+  `DEBIT` varchar(50) NOT NULL,\par
+  `BALANCE` varchar(50) NOT NULL,\par
+  `ACCOUNTTYPE` varchar(50) NOT NULL,\par
+  `FNO` varchar(30) NOT NULL,\par
+  `COMMENT` varchar(50) DEFAULT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `historycomment`\par
+--\par
+\par
+INSERT INTO `historycomment` (`DATE`, `TIME`, `DEBIT`, `BALANCE`, `ACCOUNTTYPE`, `FNO`, `COMMENT`) VALUES\par
+('2021-12-07', '22:29:27 ', '300.0', '6849.0', 'Credit-SAVINGS', 'PF301', 'Special payment intomy savings account'),\par
+('2021-12-08', '00:45:39 ', '1000.0', '7849.0', 'Credit-SAVINGS', 'PF301', 'Top up account.'),\par
+('2021-12-26', '01:54:45 ', '2011.0', '9860.0', 'Credit-SAVINGS', 'PF301', 'new deposit'),\par
+('2021-12-28', '08:36:50 ', '1000.0', '5000.0', 'Credit-SAVINGS', 'PF234', ''),\par
+('2021-12-28', '09:07:25 ', '2000.0', '7000.0', 'Credit-SAVINGS', 'PF234', ''),\par
+('2021-12-28', '10:07:04 ', '1200.0', '8200.0', 'Credit-SAVINGS', 'PF234', 'class with'),\par
+('2021-12-28', '14:51:48 ', '1300.0', '9500.0', 'Credit-SAVINGS', 'PF234', ''),\par
+('2021-12-28', '15:11:05 ', '1230.0', '10730.0', 'Credit-SAVINGS', 'PF234', 'cash on '),\par
+('2021-12-28', '15:36:40 ', '1230.0', '11960.0', 'Credit-SAVINGS', 'PF234', 'after exe'),\par
+('2021-12-30', '04:21:02 ', '2000.0', '4000.0', 'Credit-SAVINGS', 'PF2021', 'decem');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `investment`\par
+--\par
+\par
+CREATE TABLE `investment` (\par
+  `acc` int(6) NOT NULL,\par
+  `name` varchar(50) NOT NULL,\par
+  `password` varchar(30) NOT NULL,\par
+  `balance` double NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `investment`\par
+--\par
+\par
+INSERT INTO `investment` (`acc`, `name`, `password`, `balance`) VALUES\par
+(1, 'PF301', 'PF301', 1900),\par
+(3, 'PF305', 'PF305', 1300),\par
+(4, 'PF306', 'PF306', 1700),\par
+(5, 'PF307', 'PF307', 560);\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `login`\par
+--\par
+\par
+CREATE TABLE `login` (\par
+  `username` varchar(50) NOT NULL,\par
+  `password` varchar(50) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `login`\par
+--\par
+\par
+INSERT INTO `login` (`username`, `password`) VALUES\par
+('admin', 'admin'),\par
+('nas', 'nas');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `nasportal`\par
+--\par
+\par
+CREATE TABLE `nasportal` (\par
+  `FILENO` varchar(50) NOT NULL,\par
+  `NAME` varchar(50) NOT NULL,\par
+  `Year` varchar(50) NOT NULL,\par
+  `Month` varchar(50) NOT NULL,\par
+  `Day` varchar(50) NOT NULL,\par
+  `SEX` varchar(50) NOT NULL,\par
+  `MARITAL` varchar(50) NOT NULL,\par
+  `HOMEADD` varchar(50) NOT NULL,\par
+  `MOBILE` varchar(50) NOT NULL,\par
+  `EMAIL` varchar(50) NOT NULL,\par
+  `DEPT` varchar(50) NOT NULL,\par
+  `NXTKIN` varchar(50) NOT NULL,\par
+  `RELATIONSHIP` varchar(50) NOT NULL,\par
+  `NXTKINMOBILE` varchar(50) NOT NULL,\par
+  `NXTKINADD` varchar(50) NOT NULL,\par
+  `INVESTMENT` varchar(50) NOT NULL,\par
+  `SAVINGS` varchar(50) NOT NULL,\par
+  `TARGETEMG` varchar(50) NOT NULL,\par
+  `RETIRESAVINS` varchar(50) NOT NULL,\par
+  `PIX` varchar(100) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `nasportal`\par
+--\par
+\par
+INSERT INTO `nasportal` (`FILENO`, `NAME`, `Year`, `Month`, `Day`, `SEX`, `MARITAL`, `HOMEADD`, `MOBILE`, `EMAIL`, `DEPT`, `NXTKIN`, `RELATIONSHIP`, `NXTKINMOBILE`, `NXTKINADD`, `INVESTMENT`, `SAVINGS`, `TARGETEMG`, `RETIRESAVINS`, `PIX`) VALUES\par
+('PF2021', 'ageji  blessing  aj', '2021', 'November', '30', 'female', 'single', 'minfa', '0903324334', 'aji@gmail.com', 'client', 'aji', 'sister', '0903324334', 'minfa', 'investment', 'select', 'select', 'select', '925d12e6.png'),\par
+('PF234', 'roseline  maka', '2020', 'December', '24', 'female', 'single', 'lokogoma', '0904567345', 'judith@ymail.com', 'admin', 'maka', 'sister', '0904567345', 'lokogoma', 'investment', 'select', 'select', 'select', 'NOU161553817.jpg'),\par
+('PF301', 'joseph  mike', '2021', 'December', '5', 'male', 'married', 'california', '0906738464', 'yobo@yhoo.com', 'admin', 'mrs yobo', 'wife', '0906738464', 'us', 'investment', 'savings', 'target/emergency', 'retirement savings', '8.png'),\par
+('PF305', 'peter miracle', '2021', 'January', '6', 'male', 'single', 'nigeria', '0902435465', 'miracle@ymail.com', 'admin', 'miracle', 'brother', '0902435465', 'nigeria', 'investment', 'select', 'select', 'select', '7.png'),\par
+('PF306', 'mikel  goodnes', '2021', 'December', '7', 'male', 'single', 'delta', '0908736564', 'mike@yahoo.com', 'admin', 'mike', 'brother', '0908736564', 'delta', 'select', 'select', 'target/emergency', 'retirement savings', '3.png'),\par
+('PF307', 'joshua  mable', '2021', 'December', '7', 'male', 'single', 'usa', '0908274583', 'joshau@ymail.com', 'admin', 'joshua', 'brother', '0908274583', 'nigeria', 'investment', 'select', 'select', 'retirement savings', '1.png'),\par
+('PF411', 'omobolanle ireti shehu', '2020', 'December', '24', 'female', 'single', 'JOS', '0903457686', 'shehuireti@gmail.com', 'acedemy', 'shehu', 'brother', '0903457686', 'JOS', 'investment', 'Savings', '0', '0', '4.png');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `refund`\par
+--\par
+\par
+CREATE TABLE `refund` (\par
+  `FNO` varchar(50) NOT NULL,\par
+  `AMOUNT` double NOT NULL,\par
+  `DATE` varchar(50) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `refund`\par
+--\par
+\par
+INSERT INTO `refund` (`FNO`, `AMOUNT`, `DATE`) VALUES\par
+('PF301', 10000, '6/12/20'),\par
+('PF2021', 300, '');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `request`\par
+--\par
+\par
+CREATE TABLE `request` (\par
+  `FNO` varchar(50) NOT NULL,\par
+  `ACCOUNTYPE` varchar(50) NOT NULL,\par
+  `LOANAMOUNT` double NOT NULL,\par
+  `MONTHLYPAY` int(11) NOT NULL,\par
+  `DATE` varchar(50) NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `request`\par
+--\par
+\par
+INSERT INTO `request` (`FNO`, `ACCOUNTYPE`, `LOANAMOUNT`, `MONTHLYPAY`, `DATE`) VALUES\par
+('PF2021', 'savings', 2300, 3, ''),\par
+('PF234', 'savings', 1000, 1, ''),\par
+('PF301', 'savings', 30000, 1, ''),\par
+('PF305', 'savings', 7000, 2, '12/6/21'),\par
+('PF307', 'savings', 2400, 2, '');\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `retirementsav`\par
+--\par
+\par
+CREATE TABLE `retirementsav` (\par
+  `ACC` int(6) NOT NULL,\par
+  `NAME` varchar(50) NOT NULL,\par
+  `PASSWORD` varchar(30) NOT NULL,\par
+  `BALANCE` double NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `retirementsav`\par
+--\par
+\par
+INSERT INTO `retirementsav` (`ACC`, `NAME`, `PASSWORD`, `BALANCE`) VALUES\par
+(1, 'PF301', 'PF301', 1900),\par
+(2, 'PF306', 'PF306', 1600),\par
+(3, 'PF307', 'PF307', 1164);\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `targetemg`\par
+--\par
+\par
+CREATE TABLE `targetemg` (\par
+  `acc` int(6) NOT NULL,\par
+  `NAME` varchar(50) NOT NULL,\par
+  `PASSWORD` varchar(30) NOT NULL,\par
+  `BALANCE` double NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `targetemg`\par
+--\par
+\par
+INSERT INTO `targetemg` (`acc`, `NAME`, `PASSWORD`, `BALANCE`) VALUES\par
+(1, 'PF301', 'PF301', 1900),\par
+(2, 'PF306', 'PF306', 1700);\par
+\par
+-- --------------------------------------------------------\par
+\par
+--\par
+-- Table structure for table `user`\par
+--\par
+\par
+CREATE TABLE `user` (\par
+  `acc` int(6) NOT NULL,\par
+  `name` varchar(50) NOT NULL,\par
+  `password` varchar(30) NOT NULL,\par
+  `balance` double NOT NULL\par
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\par
+\par
+--\par
+-- Dumping data for table `user`\par
+--\par
+\par
+INSERT INTO `user` (`acc`, `name`, `password`, `balance`) VALUES\par
+(5, 'PF2021', 'PF2021', 4800),\par
+(4, 'PF234', 'PF234', 11960),\par
+(1, 'PF301', 'PF301', 9660),\par
+(3, 'PF306', 'PF306', 1600);\par
+\par
+--\par
+-- Indexes for dumped tables\par
+--\par
+\par
+--\par
+-- Indexes for table `history`\par
+--\par
+ALTER TABLE `history`\par
+  ADD KEY `FNO` (`FNO`);\par
+\par
+--\par
+-- Indexes for table `historycomment`\par
+--\par
+ALTER TABLE `historycomment`\par
+  ADD KEY `FNO` (`FNO`);\par
+\par
+--\par
+-- Indexes for table `investment`\par
+--\par
+ALTER TABLE `investment`\par
+  ADD UNIQUE KEY `name_2` (`name`),\par
+  ADD KEY `acc` (`acc`),\par
+  ADD KEY `name` (`name`);\par
+\par
+--\par
+-- Indexes for table `nasportal`\par
+--\par
+ALTER TABLE `nasportal`\par
+  ADD PRIMARY KEY (`FILENO`),\par
+  ADD KEY `FILENO` (`FILENO`);\par
+\par
+--\par
+-- Indexes for table `refund`\par
+--\par
+ALTER TABLE `refund`\par
+  ADD KEY `FNO` (`FNO`);\par
+\par
+--\par
+-- Indexes for table `request`\par
+--\par
+ALTER TABLE `request`\par
+  ADD PRIMARY KEY (`FNO`);\par
+\par
+--\par
+-- Indexes for table `retirementsav`\par
+--\par
+ALTER TABLE `retirementsav`\par
+  ADD UNIQUE KEY `ACC` (`ACC`),\par
+  ADD UNIQUE KEY `NAME` (`NAME`);\par
+\par
+--\par
+-- Indexes for table `targetemg`\par
+--\par
+ALTER TABLE `targetemg`\par
+  ADD UNIQUE KEY `NAME_2` (`NAME`),\par
+  ADD KEY `acc` (`acc`),\par
+  ADD KEY `NAME` (`NAME`);\par
+\par
+--\par
+-- Indexes for table `user`\par
+--\par
+ALTER TABLE `user`\par
+  ADD UNIQUE KEY `name_2` (`name`),\par
+  ADD KEY `acc` (`acc`),\par
+  ADD KEY `name` (`name`);\par
+\par
+--\par
+-- AUTO_INCREMENT for dumped tables\par
+--\par
+\par
+--\par
+-- AUTO_INCREMENT for table `investment`\par
+--\par
+ALTER TABLE `investment`\par
+  MODIFY `acc` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;\par
+--\par
+-- AUTO_INCREMENT for table `retirementsav`\par
+--\par
+ALTER TABLE `retirementsav`\par
+  MODIFY `ACC` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;\par
+--\par
+-- AUTO_INCREMENT for table `targetemg`\par
+--\par
+ALTER TABLE `targetemg`\par
+  MODIFY `acc` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;\par
+--\par
+-- AUTO_INCREMENT for table `user`\par
+--\par
+ALTER TABLE `user`\par
+  MODIFY `acc` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;\par
+--\par
+-- Constraints for dumped tables\par
+--\par
+\par
+--\par
+-- Constraints for table `history`\par
+--\par
+ALTER TABLE `history`\par
+  ADD CONSTRAINT `MEMBER-HISTORY` FOREIGN KEY (`FNO`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `historycomment`\par
+--\par
+ALTER TABLE `historycomment`\par
+  ADD CONSTRAINT `MEMBER-HISCOMMENT` FOREIGN KEY (`FNO`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `investment`\par
+--\par
+ALTER TABLE `investment`\par
+  ADD CONSTRAINT `MEMBER-INVESTMENT` FOREIGN KEY (`name`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `refund`\par
+--\par
+ALTER TABLE `refund`\par
+  ADD CONSTRAINT `REQEST-REFUND-LOAN` FOREIGN KEY (`FNO`) REFERENCES `request` (`FNO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `request`\par
+--\par
+ALTER TABLE `request`\par
+  ADD CONSTRAINT `MEMBER-REQUEST` FOREIGN KEY (`FNO`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `retirementsav`\par
+--\par
+ALTER TABLE `retirementsav`\par
+  ADD CONSTRAINT `MEMBER-RETIREMENTSAV` FOREIGN KEY (`NAME`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `targetemg`\par
+--\par
+ALTER TABLE `targetemg`\par
+  ADD CONSTRAINT `MEMBER-TARGETEMG` FOREIGN KEY (`NAME`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+--\par
+-- Constraints for table `user`\par
+--\par
+ALTER TABLE `user`\par
+  ADD CONSTRAINT `MEMBER-SAVINGS` FOREIGN KEY (`name`) REFERENCES `nasportal` (`FILENO`) ON DELETE CASCADE;\par
+\par
+\par
+}
+ 
